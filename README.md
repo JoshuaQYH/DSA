@@ -19,4 +19,4 @@ Data structure and algorithm with C. This repo is intended for recording my lear
 # Algorithm 
 
 - [ ] Bubble Sort
-- [ ] 
+
