@@ -11,6 +11,7 @@ Data structure and algorithm with C. This repo is intended for recording my lear
 - [x]  Linked stack
 - [x]  Sequential Queue
 - [x]  Linked Queue
+- [x]  Binary Search Tree
 
 
 
