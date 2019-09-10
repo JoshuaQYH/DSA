@@ -1,17 +1,28 @@
 # CDSAA
-Data structure and algorithm with C. This repo is intended for recording my learning process and output about data structure and algorithm with C (or C++) . It includes the basic implementations and some leetcode solutions.  
+Data structure and algorithm with C. This repo is intended for recording my learning process and code about data structure and algorithm with C (or C++) .
 
 
 
 ## Data Structure 
 
-- [x]  Sequential List 
-- [x]  Linked List
-- [x]  Sequential Stack 
-- [x]  Linked stack
-- [x]  Sequential Queue
-- [x]  Linked Queue
-- [x]  Binary Search Tree
+- [x] List (Basic Definition & Operations)
+  - [x]  Sequential List
+  - [x]  Linked List
+- [x] Stack  (Basic Definition & Operations)
+  - [x]  Sequential Stack 
+  - [x]  Linked stack
+- [x] Queue (Basic Definition & Operations)
+  - [x]  Sequential Queue
+  - [x]  Linked Queue
+- [x] Tree（BST）
+  - [x] Basic Definition & Operations
+  - [x] Traversal
+  - [x] Common algorithm
+- [ ] Graph
+  - [x]  Representation
+  - [ ] Traversal: depth-first-search & breadth-first-search
+  - [ ] Minimum-Spanning tree algorithm: prim
+  - [ ] Shortest path algorithm: dijkstra
 
 
 
@@ -19,5 +30,11 @@ Data structure and algorithm with C. This repo is intended for recording my lear
 
 # Algorithm 
 
-- [ ] Bubble Sort
+- [ ] Search
+- [ ] Sort
+- [ ] Recursive
+- [ ] Backtrack
+- [ ] Greedy
+- [ ] Dynamic programming
+- [ ] Divide-and-conquer
 

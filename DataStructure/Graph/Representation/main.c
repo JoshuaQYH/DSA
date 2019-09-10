@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <stdbool.h>
 #define MaxVertexNum 100  // 最大的顶点数
 typedef char VertexType  // 结点数据类型
 typedef int EdgeType     // 边权值的数据类型
@@ -35,8 +35,9 @@ typedef struct VNode{
 }VNode;
 
 typedef struct{
-    VNode nodeList[MaxVertexNum]; // 顶点表
+    VNode* nodeList[MaxVertexNum];  // 顶点表
     int vexNum, arcNum;            // 边数和弧数
+    int hasNode[MaxVertexNum];     // 确定该位置是否存在顶点
 }ALGraph;
 
 //  需要注意的是，我们规定入度是由列元素计算的，出度是由行元素计算的。
@@ -105,31 +106,94 @@ typedef struct VNode{
 }VNode;
 
 typedef struct{
-    VNode nodeList[MaxVertexNum]; // 顶点表
+    VNode nodeList[MaxVertexNum];  // 顶点表
     int vexNum, arcNum;            // 边数和弧数
+    int hasNode[MaxVertexNum];     // 确定该位置是否存在顶点
 }ALGraph;
 
-以普通邻接表为例，实现无向图的插入删除顶点，插入删除边
+以普通邻接表为例，实现有图的插入删除顶点，插入删除边
 */
 
-void initGraph(){
-
+ALGraph* initGraph(){
+    AlGraph *G = (ALGraph*)malloc(sizeof(ALGraph));
+    G->vexNum = 0;
+    G->arcNum = 0;
+    for(int i = 0; i < MaxVertexNum; i++){
+        G->hasNode[i] = false;
+        G->nodeList[i] = NULL;
+    }
+    return G;
 }
 
-void addVertex(){
 
+bool addEdge(ALGraph *G, int vertex1, int vertex2, int edgeVal;){
+    // 1 -> 2
+    if(!G) return false;
+    if(!(G->hasNode[vertex1] && G->hasNode[vertex2])) return false;
+    VNode *node1 = G->nodeList[vertex1];
+
+    ArcNode *newArc = (ArcNode*)malloc(sizeof(ArcNode));
+    newArc->adjVex = vertex2;
+    newArc->edgeVal = edgeVal;
+    newArc->next = NULL;
+
+    ArcNode *arc = node1->first;
+    if(!arc){
+        arc = newArc;
+        return true;
+    }
+    while(arc->next){
+        arc = arc->next;
+    }
+    arc->next = newArc;
+    return true;
 }
 
-void deleteVertex(){
-
+bool deleteEdge(ALGraph *G, int vertex1, int vertex2){
+    // 1 -> 2
+    if(!G) return false;
+    if(!(G->hasNode[vertex1] && G->hasNOde[vertex2])) return false;
+    VNode *vnode = G->nodeList[vertex1];
+    ArcNode *arc = vnode->first;
+    if(!arc) return true;
+    while(arc->next){
+        if(arc->next->adjVex == vertex2){
+            ArcNode *tmp = arc->next;
+            arc->next = arc->next->next;
+            free(tmp);
+            break;
+        }
+    }
+    return true;
 }
 
-void addEdge(){
-
+bool addVertex(ALGraph* G, int vertex, int data){
+    if(G->vertexNum + 1 == MaxVertexNum) return false;
+    if(G->hasNode[vertex]) return false;
+    G->vertexNum++;
+    VNode *node = (VNode*)malloc(sizeof(ALGraph));
+    node->data = data;
+    node->first = NULL;
+    G->nodeList[vertex] = node;
+    return true;
 }
 
-void deleteEdge(){
-
+bool deleteVertex(ALGraph *G, int vertex){
+    if(!G->hasNode[vertex]) return false;
+    G->hasNode[vertex] = false;
+    VNode *node = G->nodeList[vertex];
+    ArcNode *arc = node->first;
+    while(arc){
+        ArcNode* tmp = arc->next;
+        free(arc);
+        arc = tmp;
+    }
+    for(int i = 0; i < MaxVertexNum; i++){
+        if(G->hasNode[i]){
+            deleteEdge(G, i, vertex);
+        }
+    }
+    return true;
 }
 
 void printGraph(){
