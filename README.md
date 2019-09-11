@@ -1,5 +1,5 @@
 # CDSAA
-Data structure and algorithm with C. This repo is intended for recording my learning process and code about data structure and algorithm with C (or C++) .
+This repo is intended for recording my learning process and demo code about data structure and algorithm with C (or C++) .
 
 
 
@@ -18,11 +18,11 @@ Data structure and algorithm with C. This repo is intended for recording my lear
   - [x] Basic Definition & Operations
   - [x] Traversal
   - [x] Common algorithm
-- [ ] Graph
+- [x] Graph
   - [x]  Representation
-  - [ ] Traversal: depth-first-search & breadth-first-search
-  - [ ] Minimum-Spanning tree algorithm: prim
-  - [ ] Shortest path algorithm: dijkstra
+  - [x] Traversal: depth-first-search & breadth-first-search
+  - [x] Minimum-Spanning tree algorithm: prim & kruskal
+  - [x] Shortest path algorithm: dijkstra & floyd
 
 
 
