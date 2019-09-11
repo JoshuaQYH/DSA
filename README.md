@@ -27,9 +27,7 @@ This repo is intended for recording my learning process and demo code about data
 
 
 
-
-
-# Algorithm 
+## Algorithm 
 
 - [ ] Search
 - [ ] Sort
