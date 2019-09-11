@@ -23,6 +23,7 @@ This repo is intended for recording my learning process and demo code about data
   - [x] Traversal: depth-first-search & breadth-first-search
   - [x] Minimum-Spanning tree algorithm: prim & kruskal
   - [x] Shortest path algorithm: dijkstra & floyd
+  - [x] Topological Sort
 
 
 
