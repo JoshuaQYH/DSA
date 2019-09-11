@@ -146,6 +146,7 @@ bool addEdge(ALGraph *G, int vertex1, int vertex2, int edgeVal;){
         arc = arc->next;
     }
     arc->next = newArc;
+    G->arcNum++;
     return true;
 }
 
@@ -164,6 +165,7 @@ bool deleteEdge(ALGraph *G, int vertex1, int vertex2){
             break;
         }
     }
+    G->arcNum--;
     return true;
 }
 
@@ -175,6 +177,7 @@ bool addVertex(ALGraph* G, int vertex, int data){
     node->data = data;
     node->first = NULL;
     G->nodeList[vertex] = node;
+    G->vexNum++;
     return true;
 }
 
@@ -193,6 +196,7 @@ bool deleteVertex(ALGraph *G, int vertex){
             deleteEdge(G, i, vertex);
         }
     }
+    G->vexNum--;
     return true;
 }
 
