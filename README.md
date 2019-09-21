@@ -4,7 +4,7 @@ This repo is intended for recording my learning process and demo code about data
 
 
 ## Data Structure 
-
+- [x] String (Basic Definition & Operations) 
 - [x] List (Basic Definition & Operations)
   - [x]  Sequential List
   - [x]  Linked List
@@ -33,6 +33,9 @@ This repo is intended for recording my learning process and demo code about data
 - [x] Search
   - [x] Sequence search
   - [x] Binary search
+- [x] String Matching
+  - [x] Naive matching
+  - [x] KMP 
 - [ ] Sort
 - [ ] Recursive
 - [ ] Backtrack
