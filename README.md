@@ -29,7 +29,10 @@ This repo is intended for recording my learning process and demo code about data
 
 ## Algorithm 
 
-- [ ] Search
+- [x] Tree (some common algorithms)
+- [x] Search
+  - [x] Sequence search
+  - [x] Binary search
 - [ ] Sort
 - [ ] Recursive
 - [ ] Backtrack
