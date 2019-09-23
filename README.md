@@ -1,6 +1,6 @@
 
 
-# CDSAA
+# DSA
 
 This repo is intended for recording my learning process and demo codes about data structure and algorithm with C (or C++) .
 
