@@ -1,5 +1,8 @@
+
+
 # CDSAA
-This repo is intended for recording my learning process and demo code about data structure and algorithm with C (or C++) .
+
+This repo is intended for recording my learning process and demo codes about data structure and algorithm with C (or C++) .
 
 
 
@@ -36,10 +39,26 @@ This repo is intended for recording my learning process and demo code about data
 - [x] String Matching
   - [x] Naive matching
   - [x] KMP 
-- [ ] Sort
-- [ ] Recursive
+- [x] Sort
+  - [x] insert sort
+    - [x] simple insert sort
+    - [x] binary insert sort
+    - [x] shell sort
+  - [x] exchange sort
+    - [x] bubble sort
+    - [x] quick sort
+  - [x] selection sort
+    - [x] simple selection sort
+    - [x] heap sort
+  - [x] merge sort
+  - [x] radix sort
 - [ ] Backtrack
 - [ ] Greedy
 - [ ] Dynamic programming
-- [ ] Divide-and-conquer
+
+
+
+## Cheat Sheet
+
+![](/images/sort.jpg)
 
